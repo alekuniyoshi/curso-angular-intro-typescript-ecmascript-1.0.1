@@ -37,3 +37,39 @@ const [p1, p2, p3] = dbz;
 console.log('Personaje 1', p1);
 console.log('Personaje 2', p2);
 console.log('Personaje 3', p3);
+
+
+
+interface Producto {
+    desc: string,
+    precio: number,
+}
+
+const telefono: Producto = {
+    desc: "Nokia",
+    precio: 200
+}
+
+const pc: Producto = {
+    desc: "Lenovo",
+    precio: 1000,
+}
+
+function calulcarIva(productos: Producto[]): [number, number] {
+
+    let total = 0;
+    // productos.forEach(producto => total += producto.precio);
+    productos.forEach(({ precio }) => {
+        total += precio;
+    })
+    
+    return [total, total * 0.21];
+
+}
+
+const articulos = [telefono, pc];
+const [total, iva] = calulcarIva(articulos);
+
+console.log(total);
+console.log(iva);
+

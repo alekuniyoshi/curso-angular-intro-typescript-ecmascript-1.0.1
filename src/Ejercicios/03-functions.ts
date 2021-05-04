@@ -12,9 +12,9 @@ console.log('Multiplicacion', multiplicar(45, 12));
 console.log('Multiplicacion', multiplicar(45, 12, 1));
 
 interface personajeLOR {
-    nombre: string;
-    pv: number;
-    mostrarHp: () 
+    nombre: string,
+    pv: number,
+    mostrarHp: () => void,
 }
 
 function curar(personaje: personajeLOR, curarX: number): void {
