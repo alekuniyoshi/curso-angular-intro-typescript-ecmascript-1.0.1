@@ -40,7 +40,7 @@ console.log('Personaje 3', p3);
 
 
 
-interface Producto {
+export interface Producto {
     desc: string,
     precio: number,
 }
@@ -55,7 +55,7 @@ const pc: Producto = {
     precio: 1000,
 }
 
-function calulcarIva(productos: Producto[]): [number, number] {
+export function calulcarIva(productos: Producto[]): [number, number] {
 
     let total = 0;
     // productos.forEach(producto => total += producto.precio);
@@ -70,6 +70,6 @@ function calulcarIva(productos: Producto[]): [number, number] {
 const articulos = [telefono, pc];
 const [total, iva] = calulcarIva(articulos);
 
-console.log(total);
-console.log(iva);
+console.log('total :', total);
+console.log('iva : ', iva);
 
